@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishav's Bad</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4; /* Light background */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px; /* Padding for small screens */
+    }
+
+    /* Heading styles */
+    .heading {
+      background-color: #d81b60; /* Deep pink background */
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px;
+      width: 100%; /* Full width on small screens */
+      max-width: 300px; /* Maximum width for larger screens */
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .heading:hover {
+      background-color: #c91f5c; /* Darker pink on hover */
+    }
+
+    /* Explanation area */
+    .explanation {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #333; /* Dark gray text */
+      max-width: 600px;
+      display: none; /* Initially hidden */
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: white;
+    }
+
+    /* Responsive text sizes */
+    h1 {
+      font-size: 1.5rem; /* Base size for h1 */
+      margin-bottom: 10px; /* Margin for spacing */
+    }
+
+    p {
+      font-size: 1rem; /* Base size for paragraph */
+      margin: 10px 0; /* Margin for spacing */
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.3rem; /* Smaller size on medium screens */
+      }
+      .heading {
+        font-size: 1.1rem; /* Adjust heading size on medium screens */
+      }
+      .explanation {
+        font-size: 1rem; /* Adjust explanation text size */
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.2rem; /* Smaller size on small screens */
+      }
+      .heading {
+        font-size: 1rem; /* Adjust heading size on small screens */
+      }
+      .explanation {
+        font-size: 0.9rem; /* Smaller explanation text size */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heading" onclick="showDefinition('definition1')">About Me</div>
+  <div class="heading" onclick="showDefinition('definition2')">About You</div>
+  <div class="heading" onclick="showDefinition('definition3')">MY Feelings</div>
+  <div class="heading" onclick="showDefinition('definition4')">To Conclude</div>
+  
+  <div id="definition1" class="explanation">
+    If you think I don’t feel, I don’t get hurt, I show no care or love. You are wrong. I can’t show things that I know, you know too. I was getting better with you, also that part of mine was nurturing but at the same time your emotions also was a little bit of problem for me. I always thought I am not able to bring on things you expected. That thing hurted me most of time and that’s the reason sometimes I did not speak or text you properly. However, this was never going to be big issues like ending up everthing. It was improving from your side as well. I had explained you the day local came to threaten me haha… And on 28th sept when you did the same thing(though that was also the result because of me) and with issues I was going through I become completely lost. Because of family words your emotion got piled up so badly to me and it became another reason for me to think. I could have met you after internals, I think I had told you as well but situation got worse and the weather also had its own plan. Things could have ended nicely but I couldnot show the real me on messages.
+  </div>
+  
+  <div id="definition2" class="explanation">
+    You have no fault. We must be one who we are. You said you are ready to take risk about the caste. So, on another day I came with the stronger word about problem related to us. The family part is so big Prativa I can’t explain you here properly. You had given me your everything I know that. Nothing about you more, you were too good for me.
+  </div>
+  
+  <div id="definition3" class="explanation">
+    At that heat of moment I was completely lost. I had fixed feelings. I wasn’t that much hurt thinking you will not be with me now but this doesn’t mean I didn’t had idea about your suffering. I always think about your feelings. This was for 2-3 days upto the day I was at KU I guess. But when I came home It became so hard for me. And its getting worse for me nowadays.
+  </div>
+  
+  <div id="definition4" class="explanation">
+    Yetro lekhda pheri pailai kai kura repeat bhaye jasto bhayo hola. Thanks for reading (If you read), tara ajhai sabbai kura ramrari bhanna sakeko chhaina maile. Ani pheri if you think aafu laai ramro dekhauna yesto harkat gardai chha you maybe right, huna sakchha testai nai ho ki ma? I question myself. Aafno naramro dekhna nasakeko ni huna sakchhu. Timro insta ko note le trigger bhako ho ki. I am asking this to myself. But to give you this webpage, I was thinking to do ghar aaye dekhi nai. Oh no pheri manipulate nai gardai chhu ki haha. Be aware hai don’t melt on this shitty things of Rishav Khatiwada (Karma will hit him very bad). It was baadhyata more than interest(maniputaion maybe, be aware). Maybe you will share this link to others to make fun of cold hearted, selfish Rishav Khatiwada, I will never know. Sorry. Rishav Khatiwada miss you anyway(this is trueee).
+  </div>
+
+  <br>
+  <br>
+  <p>Okay kill me now. I deserve all the pain.</p>
+  <a href="pt3.html" style="text-decoration: none; color: #d81b60; font-weight: bold;">💖</a>
+
+  <script>
+    function showDefinition(definitionId) {
+      // Hide all definitions
+      const definitions = document.querySelectorAll('.explanation');
+      definitions.forEach(def => {
+        def.style.display = 'none'; // Hide all definitions
+      });
+
+      // Show the selected definition
+      const selectedDefinition = document.getElementById(definitionId);
+      if (selectedDefinition) {
+        selectedDefinition.style.display = 'block'; // Show the selected definition
+      }
+    }
+  </script>
+
+</body>
+</html>

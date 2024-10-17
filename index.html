@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Background video styling */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video covers the background */
+      z-index: -1;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif; /* Updated font */
+      color: #fff; /* White text for better contrast */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; /* Added padding for smaller screens */
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; /* Ensure blocks wrap if the screen is too small */
+      max-width: 800px; /* Set a max width for the container */
+      width: 100%; /* Allow it to shrink on smaller screens */
+      margin: auto; /* Center the container */
+    }
+
+    .block {
+      background-color: rgba(67, 64, 64, 0.8); /* Semi-transparent background */
+      padding: 15px; /* Adjusted padding for better fit */
+      margin: 10px;
+      flex: 1 1 calc(33% - 20px); /* Responsive block size */
+      min-width: 250px; /* Minimum width for blocks */
+      height: auto; /* Allow height to adjust based on content */
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+      transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover transitions */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    /* Hover effect on blocks */
+    .block:hover {
+      transform: translateY(-10px); /* Slight lift effect */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    }
+
+    .heart-container a {
+      font-size: 3rem;
+      text-decoration: none;
+      color: #d81b60; /* Deep pink for the heart */
+      transition: transform 0.3s, opacity 0.3s;
+      cursor: pointer;
+    }
+
+    .heart-container a:active {
+      transform: scale(1.4); /* Slight enlargement on click */
+    }
+
+    /* Animation for heart destruction */
+    .destroyed {
+      animation: popOut 2s forwards;
+    }
+
+    @keyframes popOut {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(3); opacity: 0; }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .block {
+        flex: 1 1 calc(50% - 20px); /* Two blocks per row on medium screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .block {
+        flex: 1 1 100%; /* Full width on small screens */
+      }
+
+      .heart-container a {
+        font-size: 2rem; /* Smaller heart size on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="simm.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Container for blocks -->
+  <div class="container">
+    <!-- First block with text -->
+    <div class="block">
+      <p>We started it from 2024/06/28. I ended it on 2024/09/28.</p>
+    </div>
+
+    <!-- Second block with text -->
+    <div class="block">
+      <p>Don't know what you think about me at this moment. Maybe you think I'm pretending, showing fake emotions.....I don't know. You must be thinking what you felt and I have no right to say anything about it.</p>
+    </div>
+
+    <!-- Third block with a heart hyperlink -->
+    <div class="block heart-container">
+      <p>Come on, put off your anger on my heart.</p>
+      <a id="heart" href="pt1.html" title="My Heart">❤️</a>
+    </div>
+  </div>
+
+  <!-- Script to "destroy" the heart on click -->
+  <script>
+    document.getElementById('heart').addEventListener('click', function() {
+      this.classList.add('destroyed');
+    });
+  </script>
+
+</body>
+</html>

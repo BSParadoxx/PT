@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You PT</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #f4f4f4; /* Light background */
+            padding: 20px;
+        }
+
+        /* Heading styles */
+        h1 {
+            color: #d81b60; /* Deep pink */
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5rem; /* Base size */
+        }
+
+        /* Photo styles */
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .photo-container img {
+            width: 100%; /* Full width on small screens */
+            max-width: 300px; /* Maximum width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+
+        /* Message styles */
+        .messages {
+            background-color: #fff; /* White background */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+            max-width: 600px; /* Max width for messages */
+            text-align: center; /* Centered text */
+            line-height: 1.5; /* Improved line height */
+            margin-bottom: 20px; /* Space below messages */
+        }
+
+        /* Audio button styles */
+        .audio-button {
+            background-color: #d81b60; /* Deep pink */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            margin-top: 20px; /* Space above button */
+        }
+
+        .audio-button:hover {
+            background-color: #c91f5c; /* Darker pink on hover */
+        }
+
+        /* Final message styles */
+        #final {
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+            max-width: 600px; /* Max width for final message */
+            text-align: center; /* Centered text */
+            line-height: 1.5; /* Improved line height */
+            margin-top: 20px; /* Space above final section */
+        }
+
+        #final p {
+            color: #333; /* Dark gray text for better readability */
+            margin-bottom: 10px; /* Space between paragraphs */
+        }
+
+        /* Responsive text sizes */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.4rem; /* Smaller size on medium screens */
+            }
+            .audio-button {
+                font-size: 0.9rem; /* Adjust button text size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem; /* Smaller size on small screens */
+            }
+            .audio-button {
+                font-size: 0.8rem; /* Adjust button text size */
+            }
+            .messages, #final {
+                padding: 10px; /* Adjust padding */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>NEVER HAD TRIED TO STEP ON YOUR HEART IF KNOWN THE FUTURE</h1>
+
+    <div class="photo-container">
+        <img src="pt.jpg" alt="Description of the photo">
+    </div>
+
+    <div class="messages">
+        <p>I loved you. I still have feelings for you. But also have accepted about my compulsion.</p>
+        <p>I don't want you to generate hate for me.</p>
+        <p>Hoping you will come with some good responses.</p>
+    </div>
+
+    <!-- Audio button -->
+    <button class="audio-button" id="playAudio">Play this clip</button>
+    
+    <audio id="audio" src="s.mp3"></audio>
+    
+    <div id="final">
+        <p>There are a lot of songs that will remind me about you.</p>
+        <p>Also, I don't know, but if you are completely out of me, please don't make fun of this particular work. I am not doing this to make myself or you feel better.</p>
+        <br>
+        <h1>Thank you so much.</h1>
+    </div>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playButton = document.getElementById('playAudio');
+
+        playButton.addEventListener('click', () => {
+            // If the audio is currently playing, pause it; otherwise, play it
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Pause Song'; // Change button text to "Pause"
+            } else {
+                audio.pause();
+                playButton.textContent = 'Play Song'; // Change button text back to "Play"
+            }
+        });
+    </script>
+
+</body>
+</html>

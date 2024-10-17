@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Consistent font */
+            background-color: #ffebee; /* Light pink background */
+            color: #040405; /* Deep pink text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 10px; /* Padding for small screens */
+            margin: 0; /* Remove default margin */
+        }
+        
+        .message {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            max-width: 600px; /* Maximum width for the message container */
+            width: 100%; /* Allow the container to be fluid */
+        }
+
+        /* Responsive text sizes */
+        h1 {
+            font-size: 1.5rem; /* Base size for h1 */
+            margin: 0.5em 0; /* Margin for spacing */
+        }
+
+        p {
+            font-size: 1rem; /* Base size for paragraph */
+            margin: 0.5em 0; /* Margin for spacing */
+        }
+
+        /* Heart link styling */
+        a {
+            text-decoration: none; 
+            color: #d81b60; /* Deep pink for heart */
+            font-weight: bold; 
+            font-size: 2rem; /* Increase size for better visibility */
+            display: inline-block; /* Center the heart */
+            margin-top: 1em; /* Space above the heart */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.3rem; /* Smaller size on medium screens */
+            }
+            p {
+                font-size: 0.9rem; /* Smaller size on medium screens */
+            }
+            a {
+                font-size: 1.5rem; /* Smaller heart size on medium screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.1rem; /* Smaller size on small screens */
+            }
+            p {
+                font-size: 0.8rem; /* Smaller size on small screens */
+            }
+            a {
+                font-size: 1.2rem; /* Smaller heart size on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message">
+        <h1>Ahh.. same shitty text again. Hope you will bear this last time!</h1>
+        <p>It started from the day I came into your house. Coming became the biggest regret. It was family vs me for 3 continuous days, and me being sick just became a joke. I thought I would take a bold step after internals, but again your emotions popped up. And it all went wrong. Now I guess a part of your heart must have hatred for me, and maybe this is the right time to say these things. I had done things in an improper way, and you have no fault in any of this. I fought with myself, and I must have snatched happiness from one side.</p>
+        <h1>Hope I can meet you one last time to properly say goodbye. No compulsion, by the way.</h1>
+        <p>Again hit this selfish heart<br>
+        <a href="pt2.html">💖</a></p>
+    </div>
+
+</body>
+</html>
